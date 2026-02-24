@@ -245,7 +245,7 @@ class SignUpPageState extends State<SignUpPage> {
                                               databaseId:
                                                   '69951d1f002692e40827',
                                               tableId: '69965edb0019ed7a133f',
-                                              rowId: ID.unique(),
+                                              rowId: auth.$id,
                                               data: info.toMap(),
                                               permissions: [
                                                 Permission.read(
