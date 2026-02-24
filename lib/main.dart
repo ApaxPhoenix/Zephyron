@@ -9,6 +9,7 @@ import 'package:zephyron/theme.dart';
 late final Client client;
 late final Account account;
 late final Storage storage;
+late final Realtime realtime;
 late final Databases databases;
 late final TablesDB tables;
 
