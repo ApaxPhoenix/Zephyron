@@ -28,8 +28,9 @@ class MiddlewareScreenState extends State<MiddlewareScreen> {
             if (mounted) {
               if (user.emailVerification) {
                 WidgetsBinding.instance.addPostFrameCallback((_) {
-                  if (mounted)
-                    Navigator.pushReplacementNamed(context, '/dashboard');
+                  if (mounted) {
+                    Navigator.pushNamed(context, '/dashboard');
+                  }
                 });
               } else {
                 setState(() {
@@ -66,11 +67,9 @@ class MiddlewareScreenState extends State<MiddlewareScreen> {
                           if (mounted && user.emailVerification) {
                             time.cancel();
                             WidgetsBinding.instance.addPostFrameCallback((_) {
-                              if (mounted)
-                                Navigator.pushReplacementNamed(
-                                  context,
-                                  '/dashboard',
-                                );
+                              if (mounted) {
+                                Navigator.pushNamed(context, '/dashboard');
+                              }
                             });
                           }
                         })

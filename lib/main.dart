@@ -59,15 +59,12 @@ class MyAppState extends State<MyApp> with WidgetsBindingObserver {
     WidgetsBinding.instance.addObserver(this);
     account
         .get()
+        .timeout(const Duration(seconds: 6))
         .then((user) {
-          if (mounted) {
-            setState(() => route = '/auth/middleware');
-          }
+          if (mounted) setState(() => route = '/auth/middleware');
         })
         .catchError((error) {
-          if (mounted) {
-            setState(() => route = '/');
-          }
+          if (mounted) setState(() => route = '/');
         });
   }
 

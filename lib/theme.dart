@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:zephyron/components/artifact.dart';
 
 class AppTheme {
   static const brand100 = Color.fromRGBO(48, 94, 231, 1);
@@ -219,9 +218,6 @@ class AppTheme {
           fontSize: 12.0,
         ),
       ),
-      extensions: [
-        brightness == Brightness.light ? Style.light() : Style.dark(),
-      ],
     );
   }
 

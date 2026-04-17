@@ -38,14 +38,16 @@ dependencies:
   path_provider: ^2.1.5
   path: ^1.9.1
   appwrite: ^20.2.1
-  archive: ^4.0.7
   crypto: ^3.0.7
   ffi: ^2.1.4
   http: ^1.6.0
-  minio: ^3.5.8
-  sqflite: ^2.4.2
+  maplibre: ^0.3.4+1
   geolocator: ^14.0.2
-  maplibre_gl: ^0.24.1
+  minio: ^3.5.8
+
+
+
+
 
 
 
@@ -56,6 +58,7 @@ dependencies:
 
 
   phosphor_flutter: ^2.1.0
+
 
 dev_dependencies:
   flutter_test:
@@ -73,6 +76,8 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  config:
+    enable-swift-package-manager: true
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
