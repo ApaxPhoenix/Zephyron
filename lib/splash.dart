@@ -93,7 +93,7 @@ class SplashScreenState extends State<SplashScreen> {
                         ),
                         onPressed: () {
                           try {
-                            Navigator.pushNamed(context, '/');
+                            Navigator.pushReplacementNamed(context, '/map');
                           } catch (error, stackTrace) {
                             developer.log(
                               'Failed to navigate to authentication screen',
@@ -103,7 +103,7 @@ class SplashScreenState extends State<SplashScreen> {
                             );
                           }
                         },
-                        child: const Text('Local Mode'),
+                        child: const Text('Offline Mode'),
                       ),
                     ],
                   ),

@@ -1,14 +1,7 @@
 enum Menu { chats, stories }
 
-enum Filters {
-  all('All'),
-  unread('Unread'),
-  read('Read'),
-  groups('Groups'),
-  contacts('Contacts');
+enum Filters { all, unread, read, groups, contacts }
 
-  final String label;
-  const Filters(this.label);
-}
+enum Types { all, email, username }
 
 enum Status { sending, sent, delivered, read }

@@ -27,14 +27,14 @@ class Artifact {
       timestamp: json['timestamp'] is DateTime
           ? json['timestamp']
           : DateTime.parse(
-        json['timestamp'] ?? DateTime.now().toIso8601String(),
-      ),
+              json['timestamp'] ?? DateTime.now().toIso8601String(),
+            ),
       message: json['message'] ?? '',
       status: json['status'] != null
           ? Status.values.firstWhere(
-            (status) => status.name == json['status'],
-        orElse: () => Status.sent,
-      )
+              (status) => status.name == json['status'],
+              orElse: () => Status.sent,
+            )
           : null,
       metadata: json['metadata'],
     );
